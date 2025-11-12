@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(135deg, #fff 0%, #ffe4e1 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .card {
+    background:(100deg, #fffbe6 0%, #ffe4e1 100%);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    padding: 32px 24px;
+    max-width: 420px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .card-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.1rem;
+    color: #504666;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  .image-section {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .image-section img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ffd700;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 8px;
+  }
+  .image-section button {
+    margin-top: 4px;
+    background: #d2691e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+  .image-section button:hover {
+    background: #99FFFF;
+    color: #110000;
+  }
+  .wish-section {
+    margin-bottom: 14px;
+  }
+  #wish-input {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #110000;
+    padding: 10px;
+    font-size: 1rem;
+    resize: vertical;
+    margin-bottom: 6px;
+    font-family: inherit;
+  }
+  #wish-template {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #110000;
+    padding: 6px;
+    font-size: 1rem;
+    background: #fffbe6;
+  }
+  .signature-section {
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  #signature-canvas {
+    border: 2px dashed #110000;
+    border-radius: 8px;
+    background: #fffbe6;
+    margin-bottom: 6px;
+    cursor: crosshair;
+  }
+  .signature-actions button {
+    background: #d2691e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+  }
+  .signature-actions button:hover {
+    background: #a0522d;
+  }
+  .music-section {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #btn-music {
+    background: #d2691e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+  #btn-music.active {
+    background: #99FFFF;
+    color: #110000;
+  }
+  .action-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .action-section button {
+    background: #d2691e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .action-section button:hover {
+    background: #99FFFF;
+    color: #110000;
+  }
+  #toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #99FFFF;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+    z-index: 999;
+  }
+  #confetti-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+  }
+  @media (max-width: 600px) {
+    .card {
+      padding: 18px 6px;
+      max-width: 98vw;
+    }
+    .card-title {
+      font-size: 1.3rem;
+    }
+    .image-section img {
+      width: 80px; height: 80px;
+    }
+    #signature-canvas {
+      width: 220px; height: 60px;
+    }
+  }
+  @media print {
+  #wish-template,
+  #btn-clear-sign {
+    display: none !important;
+  }
+
+  #btn-music {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+  }
+
+  .card-container, .card {
+    box-shadow: none !important;
+    background: #fff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .action-section, .music-section, #btn-upload-img, #toast, #confetti-canvas {
+    display: none !important;
+  }
+
+  #signature-canvas {
+    border: none !important;
+  }
+
+  .signature-section {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .signature-section label {
+    margin: 0 !important;
+    font-weight: bold !important;
+  }
+}
+.utility-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.utility-row button {
+  background: #d2691e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.utility-row button:hover {
+  background: #99FFFF;
+  color: #110000;
+}
+.utility-row audio {
+  display: none;
+}

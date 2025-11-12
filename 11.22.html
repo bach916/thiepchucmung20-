@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiệp Điện Tử 20/11 - Tri Ân Thầy Cô</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+  <div class="card-container">
+    <div class="card">
+      <h1 class="card-title">🌸 Chúc Mừng Ngày Nhà Giáo Việt Nam 20/11 🌸</h1>
+      <div class="image-section">
+        <img id="teacher-img" src="Ảnh/hình 1.jpg" alt="Ảnh thầy cô" />
+        <input type="file" id="img-upload" accept="image/*" style="display:none;">
+        <button id="btn-upload-img">Chọn ảnh thầy/cô</button>
+      </div>
+      <div class="wish-section">
+        <textarea id="wish-input" rows="3" placeholder="Nhập lời chúc 20/11 của bạn..."></textarea>
+        <select id="wish-template">
+          <option value="">-- Chọn mẫu lời chúc --</option>
+        </select>
+      </div>
+<div class="signature-section">
+  <label for="signature-canvas">Ký tên điện tử:</label>
+  <canvas id="signature-canvas" width="300" height="80"></canvas>
+</div>
+<div class="utility-row">
+  <button id="btn-clear-sign">Xóa ký tên</button>
+  <button id="btn-music">Bật nhạc nền</button>
+  <audio id="bg-music" src="Âm thanh/âm thanh 1.mp3" loop></audio>
+</div>
+      <div class="action-section">
+        <button id="btn-share">Chia sẻ</button>
+        <button id="btn-print">In/Lưu PDF</button>
+        <button id="btn-reset">Làm mới</button>
+      </div>
+    </div>
+  </div>
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
